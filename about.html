@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Chris Frank Profile</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <h1>Chris Frank</h1>
+  <div class="topnav">
+    <a href="./index.html">Home</a>
+    <a href="https://github.com/cfrank1977/BCA" target="_blank">Projects</a>
+    <a href="https://www.linkedin.com/in/christopherfrank/" target="_blank">LinkedIn</a>
+    <a class="active" href="./about.html">About</a>
+  </div>
+  <main>
+    <div class="image-section">
+      <img class="mySlides" src="./images/IMG_0673.png">
+      <img class="mySlides" src="./images/IMG_1198.png">
+      <img class="mySlides" src="./images/IMG_1361.png">
+      <img class="mySlides" src="./images/IMG_1404.png">
+      <img class="mySlides" src="./images/IMG_1450.png">
+      <img class="mySlides" src="./images/IMG_1467.png">
+    </div>
+  </main>
+  <script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) { slideIndex = 1 }
+      x[slideIndex - 1].style.display = "block";
+      setTimeout(carousel, 5000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+
+</html>
